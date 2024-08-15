@@ -1,7 +1,12 @@
 from django.shortcuts import render
-import datetime
+
 # Create your views here.
-def filter(request):
+import datetime
+def filters(request):
     dt=datetime.datetime.now()
-    d={'data':'This is builtin filters','dt':dt,'c':11}
-    return render(request,'filter.html',d)
+    d={'data':'this IS BUIlt iN FIlters','dt':dt,'c':1}
+    return render(request,'filters.html',d)
+
+def user(request):
+    d={'data':'TOday We ARE dealing with Userdefined FilTERs'}
+    return render(request,'user.html',d)
